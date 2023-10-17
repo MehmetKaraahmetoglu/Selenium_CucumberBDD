@@ -1,17 +1,17 @@
 Feature: US1006 verilen listedeki urunleri google'da arama
 
-  # verilen listede ki her urunu google'da aratip
+  # verilen listedeki her urunu google'da aratip
   # arama sonuclarinin aranan urun ismini icerdigini test edin
-
-  #liste icinde oldugunu belirtmek icin elmas icinde yazdik
-
-  @wip
+@wip
   Scenario Outline: TC10 google'da listedeki urunler aratilabilmeli
 
     Given kullanici "googleUrl" anasayfaya gider
+    And cookies kabul eder
+    And 2 saniye bekler
     Then google da "<istenenKelime>" icin arama yapar
-    And google arama sonuclarinin "istenenKelime" icerdigini test eder
+    And google arama sonuclarinin "<istenenKelime>" icerdigini test eder
     And sayfayi kapatir
+
     Examples:
       | istenenKelime |
       |Nutella        |
