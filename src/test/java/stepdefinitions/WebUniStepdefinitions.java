@@ -56,7 +56,6 @@ public class WebUniStepdefinitions {
         ReusableMethods.bekle(2);
         String expectedAlertYazisi ="validation failed";
         String actualAlertYazisi = Driver.getDriver().switchTo().alert().getText(); //popup yazisini aldik
-        System.out.println("============="+actualAlertYazisi);
         Assert.assertEquals(expectedAlertYazisi,actualAlertYazisi);
 
     }
@@ -74,7 +73,7 @@ public class WebUniStepdefinitions {
     }
     @Then("Ilk sayfaya donuldugunu test eder")
     public void ilk_sayfaya_donuldugunu_test_eder() {
-        String expectedIlkSayfaUrl ="https://webdriveruniversity.com/";
+        String expectedIlkSayfaUrl ="http://webdriveruniversity.com/";
         String actualUrl = Driver.getDriver().getCurrentUrl();
 
         Assert.assertEquals(expectedIlkSayfaUrl,actualUrl);

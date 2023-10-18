@@ -6,7 +6,7 @@ Feature: US1002 Kullanici parametre olarak yazdigi urunu amazonda aratir
     And arama sonuclarinin "Java" icerdigini test eder
     Then 2 saniye bekler
     And sayfayi kapatir
-
+@smoke
 Scenario: TC04 parametre ile apple aratir
   Given kullanici "amazonUrl" anasayfaya gider
   Then arama kutusuna "apple" yazip aratir

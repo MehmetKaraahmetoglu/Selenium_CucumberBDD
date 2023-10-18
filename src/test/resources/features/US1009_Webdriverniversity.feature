@@ -1,5 +1,5 @@
 Feature: US1009 Webdriver university test
-
+   #@wip
   Scenario: TC13 coklu window testi
 
     Given kullanici "webUniUrl" anasayfaya gider
