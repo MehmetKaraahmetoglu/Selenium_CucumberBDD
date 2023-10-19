@@ -32,4 +32,20 @@ public class AmazonPage {
     @FindBy(xpath = "//span[@class='a-size-large product-title-word-break']")
     public WebElement ilkUrunIsimElementi;
 
+    @FindBy (xpath = "//select[@id='searchDropdownBox']")
+    public WebElement dropDownElement;
+
+    @FindBy(xpath = "(//div[@class='a-section aok-relative s-image-square-aspect'])[2]")
+    public WebElement ikinciElement;
+
+    @FindBy(xpath = "//span[@id='productTitle']")
+    public WebElement ikinciUrunIsimElementi;
+
+    @FindBy(xpath = "(//*[@class='a-offscreen'])[3]")
+    public WebElement ikinciUrunFiyatElementi;
+
+    @FindBy(xpath = "//*[@id='add-to-cart-button']")
+    public WebElement addToCard;
+
+
 }

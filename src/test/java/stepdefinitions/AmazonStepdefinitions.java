@@ -5,13 +5,22 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import pages.AmazonPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
+
+import java.util.List;
 
 public class AmazonStepdefinitions {
 
     AmazonPage amazonPage=new AmazonPage();
+    Select select;
+    List<WebElement> opsiyonElementList;
+    String ikinciUrunIsim;
+    String ikinciUrunFiyat;
 
     @Given("kullanici amazonUrl anasayfaya gider")
     public void kullanici_amazon_url_anasayfaya_gider() {
@@ -88,6 +97,26 @@ public class AmazonStepdefinitions {
        String actualIlkUrunIsmi = amazonPage.ilkUrunIsimElementi.getText();
 
        Assert.assertTrue(actualIlkUrunIsmi.contains(arananUrun));
+    }
+
+    @Then("Arama kutusunun solundaki dropdown menuyu handle edin")
+    public void arama_kutusunun_solundaki_dropdown_menuyu_locate_edin() {
+        select=new Select(amazonPage.dropDownElement); //dropdown menuyu burda parantez icine yaziyoruz
+
+
+    }
+    @Then("dropdown menudeki opsiyonlari liste olarak yazdirin")
+    public void dropdown_menudeki_opsiyonlari_liste_olarak_yazdirin() {
+       opsiyonElementList = select.getOptions();
+        List<String> opsiyonlarListesi=ReusableMethods.stringListeCevir(opsiyonElementList);
+        //Reusable methodsda hazirladigimiz hazir methodu kullandik
+        System.out.println(opsiyonlarListesi);
+
+    }
+    @Then("dropdown menude {int} eleman olduğunu test edin")
+    public void dropdown_menude_eleman_olduğunu_test_edin(Integer expectedOptionSayisi) {
+        Integer actualOptionSayisi=opsiyonElementList.size();
+        Assert.assertEquals(expectedOptionSayisi,actualOptionSayisi);
     }
 
 }

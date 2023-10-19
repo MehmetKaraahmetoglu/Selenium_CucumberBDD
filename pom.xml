@@ -102,7 +102,7 @@
                     <testFailureIgnore>true</testFailureIgnore>
                     <skipTests>false</skipTests>
                     <includes>
-                        <include>**/runners/*ParalelRunner*.java</include>
+                        <include>**/runners/*Runner*.java</include>
                     </includes>
                 </configuration>
             </plugin>
@@ -121,12 +121,13 @@
                     <argLine>-Dfile.encoding=UTF-8</argLine>
                     <useFile>false</useFile>
                     <includes>
-                        <include>**/runners/*ParalelRunner*.java</include>
+                        <include>**/runners/*Runner*.java</include>
                     </includes>
-                    <testFailureIgnore>true</testFailureIgnore>
+                    <testFailureIgnore>true</testFailureIgnore>1
                 </configuration>
             </plugin>
         </plugins>
     </build>
+    <!-- detayli raporu cucumber html reports altinda js altinda buluruz -->
 
 </project>

@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="1.894" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="US1012 Kullanici excele data ekler" name="TC16 Kullanici excel'e data ekleyebilmeli" time="1.652">
+<testsuite name="Cucumber" time="9.462" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="US1014 Amazon Testleri" name="TC18 dropdown testi" time="9.178">
 <system-out><![CDATA[
-Given kullanici ulkeler excelinde Sayfa1'e kadar ayarlari yapar.............passed
-Then 5.sutunu olusturur.....................................................passed
-And baslik satirinda besinci hucreye yeni bir cell olusturur................passed
-And Olusturdugu hucreye "ulke nufusu" yazdirir..............................passed
-Then 2.satir ulke nufusu kolonuna 1500000000 yazdirir.......................passed
-And 8.satir ulke nufusu kolonuna 250000000 yazdirir.........................passed
-And Dosyayi kaydeder........................................................passed
-Then excel'de 2.satirin ulke nufusunun 1500000000 oldugunu test eder........passed
-And Then excel'de 8.satirin ulke nufusunun 250000000 oldugunu test eder.....passed
-And stream'leri kapatir.....................................................passed
+Given kullanici "amazonUrl" anasayfaya gider................................passed
+Then Arama kutusunun solundaki dropdown menuyu handle edin..................passed
+And dropdown menudeki opsiyonlari liste olarak yazdirin.....................passed
+Then dropdown menude 28 eleman olduğunu test edin...........................passed
 ]]></system-out>
 </testcase>
 </testsuite>

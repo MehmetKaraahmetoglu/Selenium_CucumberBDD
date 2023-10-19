@@ -1,10 +1,12 @@
 pages\ZeroAppPage.class
 pages\QualitydemyPage.class
+stepdefinitions\ExcelStepdefinitions.class
 utilities\ReusableMethods$1.class
 pages\GuruPage.class
 stepdefinitions\HerokuappStepDefinitions.class
 pages\GooglePage.class
 stepdefinitions\WebUniStepdefinitions.class
+runners\ParalelRun2.class
 stepdefinitions\QualitydemyStepdefinitions.class
 pages\HerokuappPage.class
 utilities\ReusableMethods.class
@@ -13,11 +15,12 @@ pages\FacebookPage.class
 stepdefinitions\Hooks.class
 stepdefinitions\AmazonStepdefinitions.class
 utilities\ReusableMethods$2.class
+pages\SaucedemoPage.class
 runners\Runner.class
 utilities\Driver.class
 stepdefinitions\GuruStepdefinitions.class
-runners\ParalelRunner1.class
+stepdefinitions\SaucedemoStepdefinitions.class
 pages\WebUniPage.class
-runners\ParalelRunner2.class
 stepdefinitions\GoogleStepdefinitions.class
 utilities\ConfigReader.class
+runners\ParalelRun1.class
